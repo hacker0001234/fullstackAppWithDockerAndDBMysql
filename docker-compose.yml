@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  mysql-db:
+    image: mysql:5.7
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_R2DBC_URL: r2dbc:mysql://mysql-db:3306/test
+      SPRING_R2DBC_USERNAME: root
+      SPRING_R2DBC_PASSWORD: root
+    command: sh -c "echo '⏳ Waiting extra 10s for MySQL...' && sleep 10 && java -jar app.jar"
+
+volumes:
+  mysql_data:
