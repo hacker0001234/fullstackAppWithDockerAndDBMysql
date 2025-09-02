@@ -3,6 +3,10 @@ package com.example.fullStack.Configs;
 import jakarta.annotation.PostConstruct;
 import org.springframework.r2dbc.core.DatabaseClient;
 import org.springframework.stereotype.Component;
+import reactor.core.Disposable;
+import reactor.util.retry.Retry;
+
+import java.time.Duration;
 
 @Component
 public class Tables {
@@ -14,7 +18,7 @@ public class Tables {
     }
 
     @PostConstruct
-    public Void init() {
+    public Disposable init() {
        return databaseClient.sql(
                         "CREATE TABLE IF NOT EXISTS users (" +
                                 "id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -23,7 +27,10 @@ public class Tables {
                                 "password VARCHAR(100) NOT NULL" +
                                 ");"
                 )
-                .then()
-                .block();
+               .then()
+               .retryWhen(Retry.backoff(10, Duration.ofSeconds(5))) // чекаємо, поки база готова
+               .doOnError(err -> System.err.println("Cannot connect to DB: " + err.getMessage()))
+               .subscribe();
     }
+
 }
