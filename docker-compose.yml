@@ -12,9 +12,10 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
       interval: 5s
-      retries: 5
+      timeout: 5s
+      retries: 10
 
   backend:
     build:
@@ -30,7 +31,6 @@ services:
       SPRING_R2DBC_URL: r2dbc:mysql://mysql-db:3306/test
       SPRING_R2DBC_USERNAME: root
       SPRING_R2DBC_PASSWORD: root
-    command: sh -c "echo '⏳ Waiting extra 10s for MySQL...' && sleep 10 && java -jar app.jar"
 
 volumes:
   mysql_data:
