@@ -1,0 +1,7 @@
+com\example\fullStack\Configs\Tables.class
+com\example\fullStack\Controllers\MainController.class
+com\example\fullStack\Configs\RouterConfig.class
+com\example\fullStack\FullStackApplication.class
+com\example\fullStack\Services\MainService.class
+com\example\fullStack\Configs\R2DBCConfig.class
+com\example\fullStack\DTO\UserDTO.class
