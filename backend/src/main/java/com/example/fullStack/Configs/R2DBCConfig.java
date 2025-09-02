@@ -14,28 +14,29 @@ import static io.r2dbc.spi.ConnectionFactoryOptions.*;
 @Configuration
 public class R2DBCConfig {
 
-    @Value("${SPRING_R2DBC_URL:r2dbc:mysql://localhost:3307/test}")
-    private String url;
+    @Value("${database.host}")
+    private String host;
 
-    @Value("${SPRING_R2DBC_USERNAME:root}")
+    @Value("${database.port}")
+    private String port;
+
+    @Value("${database.username}")
     private String username;
 
-    @Value("${SPRING_R2DBC_PASSWORD:root}")
+    @Value("${database.password}")
     private String password;
+
+    @Value("${database.name}")
+    private String database;
+
+
 
     @Bean
     public ConnectionFactory factory() {
-        // Парсим URL формату r2dbc:mysql://host:port/database
-        String[] parts = url.replace("r2dbc:mysql://", "").split("/");
-        String hostPort = parts[0];
-        String database = parts[1];
-        String host = hostPort.split(":")[0];
-        int port = Integer.parseInt(hostPort.split(":")[1]);
-
         ConnectionFactoryOptions options = ConnectionFactoryOptions.builder()
                 .option(DRIVER, "mysql")
                 .option(HOST, host)
-                .option(PORT, port)
+                .option(PORT, Integer.parseInt(port))
                 .option(USER, username)
                 .option(PASSWORD, password)
                 .option(DATABASE, database)

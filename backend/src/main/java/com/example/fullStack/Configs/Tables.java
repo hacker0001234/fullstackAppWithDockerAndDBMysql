@@ -28,7 +28,7 @@ public class Tables {
                                 ");"
                 )
                .then()
-               .retryWhen(Retry.backoff(10, Duration.ofSeconds(5))) // чекаємо, поки база готова
+               .retryWhen(Retry.backoff(10, Duration.ofSeconds(5)))
                .doOnError(err -> System.err.println("Cannot connect to DB: " + err.getMessage()))
                .subscribe();
     }
