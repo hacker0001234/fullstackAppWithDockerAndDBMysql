@@ -6,7 +6,7 @@ export default function TestApiToBackend()
     const [data, setData] = useState("");
 
     const testApiToBackend = () => {
-        axios.get("http://localhost:8081/api/backend").then(response => {
+        axios.get("/api/backend").then(response => {
             setData(response.data);
         })
     }

@@ -14,7 +14,7 @@ export default function TestApiToBD(){
         setPassword("");
         setName("");
 
-        axios.post("http://localhost:8081/api/add",{name: name, email: email, password: password})
+        axios.post("/api/add",{name: name, email: email, password: password})
             .then(res => setResponse(res.data));
 
     }
