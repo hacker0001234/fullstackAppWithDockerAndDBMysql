@@ -25,7 +25,8 @@ public class MainService {
                 .bind("password", userDTO.getPassword())
                 .fetch()
                 .rowsUpdated()
-                .then(Mono.just("User added successfully"));
+                .then(Mono.just("User added successfully"))
+                .onErrorResume((e) -> Mono.just("Error adding user"));
 
     }
 
