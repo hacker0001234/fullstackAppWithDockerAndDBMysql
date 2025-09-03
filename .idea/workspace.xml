@@ -10,7 +10,8 @@
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/fullStack/Configs/R2DBCConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/fullStack/Configs/R2DBCConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/fullStack/Configs/Tables.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/fullStack/Configs/Tables.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/fullStack-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/fullStack-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/fullStack-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/fullStack-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,7 @@
       <updated>1756716641805</updated>
       <workItem from="1756716643325" duration="8902000" />
       <workItem from="1756814789778" duration="5559000" />
-      <workItem from="1756914438642" duration="953000" />
+      <workItem from="1756914438642" duration="1568000" />
     </task>
     <servers />
   </component>

@@ -5,18 +5,20 @@ import io.r2dbc.spi.ConnectionFactoryOptions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.r2dbc.core.DatabaseClient;
 
 import static io.r2dbc.spi.ConnectionFactoryOptions.*;
 
 @Configuration
+@Profile("!test")
 public class R2DBCConfig {
 
     @Value("${database.host}")
     private String host;
     @Value("${database.port}")
     private String port;
-    @Value("${database.user}")
+    @Value("${database.username}")
     private String user;
     @Value("${database.password}")
     private String password;
