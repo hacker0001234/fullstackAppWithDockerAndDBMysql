@@ -5,7 +5,7 @@ export default function TestApiToBackendGet(){
     const [users, setUsers] = useState([]);
 
     const getUsers = ()=>{
-        axios.get("http://localhost:8081/api/get").then(res => setUsers(res.data));
+        axios.get("/api/get").then(res => setUsers(res.data));
     }
     useEffect(() => {
         console.log(users);
