@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6f664fc-cc09-4e70-90ec-7c13938815fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/index-2fC0SKzQ.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/index-C3ANnTcZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/dist/assets/index-2fC0SKzQ.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/elements/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/elements/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/elements/TestApiToBD.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/elements/TestApiToBD.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/elements/TestApiToBackendGet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/elements/TestApiToBackendGet.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +59,9 @@
       <recent name="C:\Users\Коля\Desktop\programing_projects\fullStack\backend\src\main\resources\static" />
       <recent name="C:\Users\Коля\Desktop\programing_projects\fullStack\backend\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Коля\Desktop\programing_projects\fullStack\backend\src\main\resources\static" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="FullStackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -95,7 +90,7 @@
       <updated>1756716641805</updated>
       <workItem from="1756716643325" duration="8902000" />
       <workItem from="1756814789778" duration="5559000" />
-      <workItem from="1756914438642" duration="5153000" />
+      <workItem from="1756914438642" duration="5838000" />
     </task>
     <servers />
   </component>
