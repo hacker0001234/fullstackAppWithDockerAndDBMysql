@@ -20,6 +20,7 @@ export default function TestApiToBackendGet(){
                     <p>user name : {user.name}, user email : {user.email}, user password : {user.password}</p>
                 ))}
             </div>
+            <button onClick={(e) => window.location.href = "/post"}>prev</button>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 export default function TestApiToBD(){
@@ -6,6 +6,7 @@ export default function TestApiToBD(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [response, setResponse] = useState("");
+    const [disabled, setDisabled] = useState(true);
 
     const postData = () => {
         console.log(name,email,password);
@@ -19,6 +20,13 @@ export default function TestApiToBD(){
 
     }
 
+    useEffect(() => {
+        if(name.trim() === "" || email.trim() === "" || password.trim() === ""){
+           setDisabled(true);
+        }else {
+            setDisabled(false);
+        }
+    }, [name,email,password]);
     return(
         <div>
             <h1>Test API to BD</h1>
@@ -28,8 +36,9 @@ export default function TestApiToBD(){
             <input value={email} type={"text"} onChange={(event) => setEmail(event.target.value)}/>
             <p>set password</p>
             <input value={password} type={"text"} onChange={(event) => setPassword(event.target.value)}/>
-            <button onClick={postData}>add</button>
+            <button onClick={postData} disabled={disabled}>add</button>
             <p> response : {response}</p>
+            <button onClick={(e) => window.location.href = "/get"}>next</button>
         </div>
     )
 }
